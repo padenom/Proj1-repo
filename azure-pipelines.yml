@@ -20,6 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName Git_project -linkedTemplateUri https://github.com/padenom/AzureRmPipeline-repo/'
+    overrideParameters: '-projectName Git_project -linkedTemplateUri https://raw.githubusercontent.com/padenom/AzureRmPipeline-repo/master/CreateWebApp/linkedStorageAccount.json?token=AKP5CO36GRQBEEQIPRZGDQ264J74O'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
