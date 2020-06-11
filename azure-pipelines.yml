@@ -12,9 +12,11 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'AzureRmPipeline-conn'
     subscriptionId: 'bb1c8036-e45c-44d4-a1a7-8fa269f2afa2'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzureRmPipeline-rg'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
